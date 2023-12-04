@@ -11,3 +11,8 @@
   </a>
 </h2>
 
+
+<img src="https://github.com/MertSolgun/NBA-LEGENDS/assets/115940928/03031128-b295-4182-b14f-d745240acd73" width="100%"/>
+
+
+

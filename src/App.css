@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
+
+body {
+  background-color: aliceblue;
+  font-family: "JetBrains Mono", monospace;
+}
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  width: 200px;
+}
+input::placeholder {
+  color: black;
+  font-family: "JetBrains Mono", monospace;
+}
+input {
+  font-family: "JetBrains Mono", monospace;
+  background-color: rgba(59, 67, 166, 0.449);
+  width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+  outline: none;
+}
+
+/* header */
+
+/* playercard */
+
+.playermain {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.cardimg {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.playerimg {
+  position: relative;
+}
+
+.playername {
+  display: flex;
+  z-index: 1;
+  position: relative;
+  background-color: rgb(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.static {
+  cursor: pointer;
+  position: absolute;
+  background-color: rgba(78, 38, 38, 0.847);
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  animation: myAnim2 2s ease 0s 1 normal forwards;
+}
+.static ul {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: center;
+}
+.static ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.ball {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes myAnim2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* media query */
+
+@media (max-width: 1300px) {
+  .playermain {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (max-width: 900px) {
+  .playermain {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 700px) {
+  .playermain {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+  .cardimg {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  input {
+    width: 70%;
+    border-radius: 10px;
+    background-color: rgba(59, 67, 166, 0.449);
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  .header img {
+    width: 100px;
+  }
+  .header h1 {
+    font-size: 1.3rem;
+  }
+}
